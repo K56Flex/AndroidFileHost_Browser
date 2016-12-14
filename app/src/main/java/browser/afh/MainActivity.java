@@ -324,7 +324,7 @@ public class MainActivity extends AppCompatActivity implements AppbarScroll, Fra
     }
 
     @Nullable
-    public String getATEKey() {
+    public static String getATEKey() {
         return null;
     }
 

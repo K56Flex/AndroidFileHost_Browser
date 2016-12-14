@@ -96,6 +96,7 @@ dependencies {
     // dialogs
     compile 'com.github.javiersantos:BottomDialogs:1.2.1'
     compile 'com.afollestad.material-dialogs:core:0.9.1.0'
+    compile 'com.afollestad.material-dialogs:commons:0.9.1.0'
     compile('com.crashlytics.sdk.android:crashlytics:2.6.5@aar') {
         transitive = true;
     }

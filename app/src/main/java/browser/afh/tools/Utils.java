@@ -4,6 +4,7 @@ package browser.afh.tools;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.graphics.Color;
+import android.util.Log;
 
 import java.text.DecimalFormat;
 
@@ -46,10 +47,12 @@ public class Utils {
     }
 
     public static String getStringColor(Resources resources, int key) {
-        return Integer.toHexString(resources.getColor(key));
+        String s = Integer.toHexString(resources.getColor(key));
+        Log.i(Constants.TAG, "getStringColor: " + s);
+        return s;
     }
 
     public static int parseColor(String string){
-        return Color.parseColor(string);
+        return Color.parseColor("#" + string);
     }
 }
