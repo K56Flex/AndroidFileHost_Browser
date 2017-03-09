@@ -92,9 +92,9 @@ public class MainActivity extends AppCompatActivity implements AppbarScroll, Fra
 
         prefs = new Prefs(getApplicationContext());
         String deviceID = getIntent().getStringExtra("device_id");
-        if (!BuildConfig.DEBUG){
+        //if (!BuildConfig.DEBUG){
           Fabric.with(this, new Crashlytics());
-        }
+        //}
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         final SearchView searchView = (SearchView) findViewById(R.id.searchView);
         setSupportActionBar(toolbar);
@@ -377,12 +377,12 @@ public class MainActivity extends AppCompatActivity implements AppbarScroll, Fra
 
     @DebugLog
     public void updatesCheck(){
-        new AppUpdater(getApplicationContext())
+        new AppUpdater(this)
                 .setUpdateFrom(UpdateFrom.GITHUB)
                 .setGitHubUserAndRepo("out386","AndroidFileHost_Browser")
                 .showEvery(5)
                 .showAppUpdated(false)
-                .setDisplay(Display.SNACKBAR)
+                .setDisplay(Display.DIALOG)
                 .start();
     }
 
